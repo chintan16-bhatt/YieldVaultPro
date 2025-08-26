@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: yieldvaultpro
+            expected-sender: ST3M8W2TE0NWBWJ0ZTTFPGFVX8N6REV8YPS66DH1R
+            cost: 82210
+            path: "contracts\\yieldvaultpro.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
